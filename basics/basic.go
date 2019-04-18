@@ -50,6 +50,29 @@ func makeDoubleOrHalf(num int) int {
 	return double(num)
 }
 
+func sayHello(name string) string {
+	return "Hello, " + name + "!"
+}
+
+func resultCalculation(marks int) string {
+	passingMarks := 40
+	distinctionMarks := 75
+	if marks < passingMarks {
+		return "FAIL"
+	} else if marks >= passingMarks && marks < distinctionMarks {
+		return "PASS"
+	}
+	return "DISTINCTION"
+}
+func passMarksCalculation(marks int) int {
+	passingMarks := 40
+	if marks < passingMarks {
+		extraMarks := marks * 20 / 100
+		return passingMarks + extraMarks
+	}
+	return -1
+}
+
 func main() {
 	fmt.Printf("The sum of number is: %d\n", add(10, 12))
 	fmt.Printf("The subtraction of number is: %d\n", sub(20, 16))
@@ -57,4 +80,8 @@ func main() {
 	fmt.Printf("The division of number is: %d\n", div(65, 5))
 	fmt.Printf("The number is even: %t\n", isEven(10))
 	fmt.Printf("The number is: %d\n", makeDoubleOrHalf(10))
+	fmt.Printf(" Greetings: %s\n", sayHello("Bijendra"))
+	fmt.Printf(" Result is: %s\n", resultCalculation(50))
+	fmt.Printf(" Passing Marks: %d\n", passMarksCalculation(90))
+
 }
