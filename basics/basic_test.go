@@ -27,3 +27,26 @@ func TestAdd(t *testing.T) {
 		t.Errorf("Add expectation mismtached. \n\t\t got: %d \n\t\t want: %d ", got, want)
 	}
 }
+
+func TestSub(t *testing.T) {
+	got := sub(20, 10)
+	want := 10
+	if got != want {
+		t.Errorf("Sub expectation mismtached. \n\t\t got: %d \n\t\t want: %d ", got, want)
+	}
+	got = sub(-20, -10)
+	want = -10
+	if got != want {
+		t.Errorf("sub expectation mismtached. \n\t\t got: %d \n\t\t want: %d ", got, want)
+	}
+	got = sub(0, 0)
+	want = 0
+	if got != want {
+		t.Errorf("sub expectation mismtached. \n\t\t got: %d \n\t\t want: %d ", got, want)
+	}
+	got = sub(-12, 10)
+	want = -22
+	if got != want {
+		t.Errorf("sub expectation mismtached. \n\t\t got: %d \n\t\t want: %d ", got, want)
+	}
+}
