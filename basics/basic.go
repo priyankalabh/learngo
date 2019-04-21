@@ -66,13 +66,13 @@ func resultCalculation(marks int) string {
 }
 
 func passMarksCalculation(marks int) int {
+	notApplicable := -1
 	passingMarks := 40
 	if marks < passingMarks {
 		extraMarks := marks * 20 / 100
 		return passingMarks + extraMarks
 	}
-
-	return -1
+	return notApplicable
 }
 
 func main() {
